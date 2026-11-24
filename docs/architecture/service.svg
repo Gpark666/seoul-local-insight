@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img" aria-labelledby="arch-seoul-service-title arch-seoul-service-desc">
+<title id="arch-seoul-service-title">서울 지역 생활정보 지도 서비스 아키텍처</title>
+<desc id="arch-seoul-service-desc">Expo 웹과 FastAPI가 공공데이터와 네이버 검색을 연결한다. 지역 상태 공유 흐름과 지도 검색 흐름은 별도 요청 경로다.</desc>
+<rect width="1000" height="900" fill="white"/>
+<text x="28" y="31" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="start">서울 지역 생활정보 지도 서비스 아키텍처</text>
+<text x="28" y="60" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16" font-weight="400" fill="#566570" text-anchor="start">본인: PM·시스템 설계·백엔드 / 팀원: 프런트 구현 / 프런트 개발 지도·지원</text>
+<polyline points="310,167 365,167" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="365.00,167.00 355.91,171.17 355.91,162.83" fill="#536979"/>
+<polyline points="500,235 500,280 260,280 260,330" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="260.00,330.00 255.83,320.91 264.17,320.91" fill="#536979"/>
+<polyline points="740,235 740,330" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="740.00,330.00 735.83,320.91 744.17,320.91" fill="#536979"/>
+<polyline points="175,470 175,550" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="175.00,550.00 170.83,540.91 179.17,540.91" fill="#536979"/>
+<polygon points="175.00,470.00 179.17,479.09 170.83,479.09" fill="#536979"/>
+<polyline points="370,470 370,510 500,510 500,550" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="500.00,550.00 495.83,540.91 504.17,540.91" fill="#536979"/>
+<polygon points="370.00,470.00 374.17,479.09 365.83,479.09" fill="#536979"/>
+<polyline points="825,470 825,550" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="825.00,550.00 820.83,540.91 829.17,540.91" fill="#536979"/>
+<polygon points="825.00,470.00 829.17,479.09 820.83,479.09" fill="#536979"/>
+<rect x="40" y="100" width="270" height="135" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="56" y="131" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">지역 선택</text>
+<text x="56" y="163" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">현재 위치 또는 지역 검색</text>
+<text x="56" y="186" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">날씨·인구 화면의 기준 좌표</text>
+<text x="56" y="209" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">선택 지역을 공통 상태로 공유</text>
+<rect x="365" y="100" width="595" height="135" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="381" y="131" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">Expo · React 웹 화면</text>
+<text x="381" y="163" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">RegionDataProvider: 날씨·인구 병렬 요청</text>
+<text x="381" y="186" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">날씨 / 유동인구 / 지도 화면</text>
+<text x="381" y="209" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">지역 변경·수동 새로고침·30분 주기 갱신</text>
+<rect x="40" y="330" width="440" height="140" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="56" y="361" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">FastAPI 백엔드 · 본인 담당</text>
+<text x="56" y="393" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">/api/v1/weather/current</text>
+<text x="56" y="416" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">/api/v1/population/nearby</text>
+<text x="56" y="439" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">라우터 → 서비스 → 도메인 데이터 처리</text>
+<rect x="520" y="330" width="440" height="140" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="536" y="361" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">Expo 서버 · 네이버 검색</text>
+<text x="536" y="393" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">/api/search?query=...</text>
+<text x="536" y="416" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">APIHub 요청 후 legacy 대체 요청</text>
+<text x="536" y="439" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">시설 검색·좌표 변환·중복 제거</text>
+<rect x="40" y="550" width="270" height="150" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="581" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">기상청 데이터</text>
+<text x="56" y="613" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">관측·초단기·단기·중기예보</text>
+<text x="56" y="636" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">격자 좌표·발표 시각 처리</text>
+<text x="56" y="659" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">공통 날씨 응답·체감온도</text>
+<rect x="365" y="550" width="270" height="150" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="381" y="581" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">서울시 실시간 인구</text>
+<text x="381" y="613" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">기준 장소 110개에서 선별</text>
+<text x="381" y="636" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">지역별 비동기 조회</text>
+<text x="381" y="659" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">5분 캐시·부분 실패 분리</text>
+<rect x="690" y="550" width="270" height="150" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="706" y="581" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">네이버 지도·지역 검색</text>
+<text x="706" y="613" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">지도 중심 역지오코딩</text>
+<text x="706" y="636" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">생활시설 검색·마커 표시</text>
+<text x="706" y="659" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">인근 측정지역 혼잡도 연결</text>
+<rect x="40" y="765" width="920" height="85" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="796" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">데이터 해석</text>
+<text x="56" y="828" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">시설별 혼잡도는 가까운 측정지역의 참고 정보 / 자체 학습 모델 없이 공공 API와 계산 로직으로 구성</text>
+<text x="28" y="884" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="15" fill="#53616d">공개용 정리 2026-11-24 · 현재 보관 소스 기준</text>
+</svg>

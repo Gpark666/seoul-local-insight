@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img" aria-labelledby="arch-seoul-data_pipeline-title arch-seoul-data_pipeline-desc">
+<title id="arch-seoul-data_pipeline-title">공공데이터 전처리와 요청 처리 파이프라인</title>
+<desc id="arch-seoul-data_pipeline-desc">기준 좌표 JSON과 실시간 조회 응답은 분리한다. 이 서비스는 자체 모델 학습 대신 데이터 처리 파이프라인으로 설명한다.</desc>
+<rect width="1000" height="900" fill="white"/>
+<text x="28" y="31" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="start">공공데이터 전처리와 요청 처리 파이프라인</text>
+<text x="28" y="60" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16" font-weight="400" fill="#566570" text-anchor="start">기준 장소 전처리 + 날씨·인구의 요청 시 데이터 변환</text>
+<polyline points="310,172 365,172" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="365.00,172.00 355.91,176.17 355.91,167.83" fill="#536979"/>
+<polyline points="825,240 825,285 260,285 260,345" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="260.00,345.00 255.83,335.91 264.17,335.91" fill="#536979"/>
+<polyline points="825,240 825,345" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="825.00,345.00 820.83,335.91 829.17,335.91" fill="#536979"/>
+<polyline points="500,240 500,310 740,310 740,345" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="740.00,345.00 735.83,335.91 744.17,335.91" fill="#536979"/>
+<polyline points="260,530 260,630" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="260.00,630.00 255.83,620.91 264.17,620.91" fill="#536979"/>
+<polyline points="740,530 740,580 480,580 480,697" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="480.00,697.00 475.83,687.91 484.17,687.91" fill="#536979"/>
+<polyline points="740,530 740,630" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="740.00,630.00 735.83,620.91 744.17,620.91" fill="#536979"/>
+<rect x="40" y="105" width="270" height="135" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">장소 목록 XLSX</text>
+<text x="56" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">장소 코드·명칭 읽기</text>
+<text x="56" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">네이버 지역 검색 요청</text>
+<text x="56" y="214" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">좌표 후보 정리</text>
+<rect x="365" y="105" width="270" height="135" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="381" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">기준 장소 JSON</text>
+<text x="381" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">좌표 확보 110개</text>
+<text x="381" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">미해결 11개 별도 보관</text>
+<text x="381" y="214" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">서비스는 확보 좌표 사용</text>
+<rect x="690" y="105" width="270" height="135" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="706" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">사용자 요청</text>
+<text x="706" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">위도·경도 입력</text>
+<text x="706" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">반경·개수 옵션 검증</text>
+<text x="706" y="214" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">지역·지도별 요청값 적용</text>
+<rect x="40" y="345" width="440" height="185" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="56" y="376" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">날씨 처리</text>
+<text x="56" y="408" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">위경도 → 기상청 격자 좌표</text>
+<text x="56" y="431" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">KST 기준 사용 가능한 발표 시각 선택</text>
+<text x="56" y="454" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">현재·초단기·단기 조회 / 중기 육상·기온 병렬 조회</text>
+<text x="56" y="477" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">공통 항목 정리·체감온도·중복 날짜 제거</text>
+<rect x="520" y="345" width="440" height="185" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="536" y="376" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">인구 처리</text>
+<text x="536" y="408" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Haversine 거리 → 반경 내 가까운 장소 선별</text>
+<text x="536" y="431" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">장소 코드 중복 제거 → 5분 캐시 확인</text>
+<text x="536" y="454" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">여러 지역 비동기 조회 → 개별 실패 분리</text>
+<text x="536" y="477" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">인구 범위·혼잡도·측정 시각 변환</text>
+<rect x="40" y="630" width="440" height="135" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="661" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">공통 데이터 응답</text>
+<text x="56" y="693" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">날씨: current / hourly / daily / weekly</text>
+<text x="56" y="716" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">인구: 위치·거리·인구 범위·혼잡도·시각</text>
+<text x="56" y="739" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">화면에서는 결과와 오류 상태를 별도 관리</text>
+<rect x="520" y="630" width="440" height="135" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="536" y="661" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">지도 시설과 결합</text>
+<text x="536" y="693" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">지역·카테고리 검색 → 좌표 형식 변환</text>
+<text x="536" y="716" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">시설 좌표에서 1.5km 내 측정지역 조회</text>
+<text x="536" y="739" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">가장 가까운 측정지역을 시설 마커에 연결</text>
+<text x="28" y="884" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="15" fill="#53616d">공개용 정리 2026-11-24 · 현재 보관 소스 기준</text>
+</svg>
